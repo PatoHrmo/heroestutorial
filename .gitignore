@@ -30,6 +30,7 @@ local.properties
 
 node_modules/
 typings/
+htdocs.rar
 
 #################
 ## Visual Studio
