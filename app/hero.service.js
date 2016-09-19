@@ -21,7 +21,7 @@ var HeroService = (function () {
     };
     HeroService.prototype.getHeroes = function () {
         return this.http.get("server/heroes.php").toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     HeroService.prototype.getHeroesSlowly = function () {
