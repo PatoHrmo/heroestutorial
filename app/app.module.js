@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+var common_1 = require('@angular/common');
 var app_component_1 = require('./app.component');
 var dashboard_component_1 = require('./dashboard.component');
 var hero_detail_component_1 = require('./hero-detail.component');
@@ -36,7 +37,7 @@ var AppModule = (function () {
                 heroes_component_1.HeroesComponent
             ],
             providers: [
-                hero_service_1.HeroService
+                hero_service_1.HeroService, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
