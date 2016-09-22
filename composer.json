@@ -1,0 +1,17 @@
+{
+    "name": "patrik/heroestutorial",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patrik Hrmo",
+            "email": "patohrmo@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.5"
+    },
+    "config": {
+      "vendor-dir": "server_modules"
+    }
+}
