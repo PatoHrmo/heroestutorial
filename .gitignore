@@ -219,4 +219,5 @@ pip-log.txt
 .mr.developer.cfg
 
 /server_modules/
+app/*.*.js
 app/*.js
