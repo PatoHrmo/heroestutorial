@@ -14,7 +14,7 @@ export class HeroService {
   }
 
   getHeroes(): Promise<Hero[]> {
-    return this.http.get("server/heroes.php").toPromise()
+    return this.http.get("server/getallheroes").toPromise()
     .then(response => response.json() as Hero[])
     .catch(this.handleError);
 
@@ -28,7 +28,7 @@ export class HeroService {
 
   getHero(id: number): Promise<Hero> {
     return this.getHeroes()
-               .then(heroes => heroes.find(hero => hero.id === id));
+               .then(heroes => heroes.find(hero => hero.id == id));
   }
 }
 

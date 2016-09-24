@@ -20,7 +20,7 @@ var HeroService = (function () {
         return Promise.reject(error.message || error);
     };
     HeroService.prototype.getHeroes = function () {
-        return this.http.get("server/heroes.php").toPromise()
+        return this.http.get("server/getallheroes").toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
@@ -33,7 +33,7 @@ var HeroService = (function () {
     };
     HeroService.prototype.getHero = function (id) {
         return this.getHeroes()
-            .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
+            .then(function (heroes) { return heroes.find(function (hero) { return hero.id == id; }); });
     };
     HeroService = __decorate([
         core_1.Injectable(), 
