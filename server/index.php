@@ -18,12 +18,10 @@ $app->get('/hello/{name}', function (Request $request, Response $response) {
     return $response;
 });
 $app->get('/getallheroes', function (Request $request, Response $response) {
-
     $data = $this->database->getAllHeroes();
-    $data = json_encode($data);
-    $response->getBody()->write($data);
+    $newresponse = $response->withJson($data);
 
-    return $response;
+    return $newresponse;
 });
 
 $app->run();
